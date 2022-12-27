@@ -22,9 +22,6 @@ body {
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 
 .btn {
