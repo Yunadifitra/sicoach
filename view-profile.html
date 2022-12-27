@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Urbanist:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="coachProfile-page">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.svg" alt="SiCoach Logo">
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="btn transparent">LOGOUT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+    </div>
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <div class="picture">
+                        <img src="https://i.ibb.co/0cMfpcr/product-4.jpg"
+                            class="picture-src" id="wizardPicturePreview" title="">
+                        <span><input type="file" id="wizard-picture" class="" required></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Coach Profile</h4>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12"><label class="labels">Nama Lengkap</label>
+                            <h5>Nama Lengkap</h5>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <label class="labels">Nomor Telepon</label>
+                            <h5>Nomor Telepon</h5>
+                        </div>
+                        <div class="col-md-12"><label class="labels">Provinsi</label>
+                            <h5>Provinsi</h5>
+                        </div>
+                        <div class="col-md-12"><label class="labels">Kota</label>
+                            <h5>Kota</h5>
+                        </div>
+                        <div class="col-md-12"><label class="labels">Kecamatan</label>
+                            <h5>Kecamatan</h5>
+                        </div>
+                        <div class="col-md-12"><label class="labels">Kelurahan</label>
+                            <h5>Kelurahan</h5>
+                        </div>
+                        <div class="col-md-12"><label class="labels">Alamat</label>
+                            <h5>Alamat</h5>
+                        </div>
+                        <div class="col-md-12"><label class="labels">Usia</label>
+                            <h5>Usia</h5>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="labels">Gender</label>
+                            <h5>Gender</h5>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <label class="labels">Cabang Olahraga</label>
+                            <h5>Cabang Olahraga</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 py-5">
+                    <div class="col-md-12">
+                        <label class="labels">Pengalaman Melatih</label>
+                        <h5>Pengalaman Melatih</h5>
+                    </div> <br>
+                    <div class="col-md-12">
+                        <label class="labels">Prestasi</label>
+                        <h5>Prestasi</h5>
+                    </div>
+                </div>
+                <div class="mt-5 text-center">
+                    <a href="#" class="btn solid">CONTACT ME</a>
+                </div>
+            </div>
+        </div>
+        <!-- <script>
+            $(document).ready(function () {
+                // Prepare the preview for profile picture
+                $("#wizard-picture").change(function () {
+                    readURL(this);
+                });
+            });
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script> -->
+</body>
+
+</html>
