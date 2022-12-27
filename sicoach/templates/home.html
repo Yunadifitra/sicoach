@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+    {% for buku in books %}
+    <tr>
+      <td>
+        {% if buku.cover %}
+        <img src="{{ buku.cover.url }}" width="90px" />
+        {% endif %}
+      </td>
+      <td>{{ buku.judul }}</a></td>
+      <td>{{ buku.penulis }}</td>
+      <td>{{ buku.penerbit }}</td>
+      <td>{{ buku.jumlah }}</td>
+      <td>{{ buku.kelompok_id }}{{ buku.user_id }}</td>
+    {% endfor %}
+  </tr>
+{% endblock %}
