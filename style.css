@@ -509,6 +509,23 @@ input[type="radio"] {
   line-height: 120%;
 }
 
+.text-left {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.text-right.content {
+  text-align: center!important;
+  color: #550065;
+}
+
+.p-command {
+  margin-bottom: 5px;
+}
+
 .form-control:focus {
   box-shadow: none;
   border-color: #7e4a9b;
@@ -540,7 +557,7 @@ input[type="radio"] {
 }
 
 .labels {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .radio-container {
@@ -659,4 +676,25 @@ input[type="radio"] {
 .col-4 h4{
     font-size: 20px;
     padding-top: 10px;
+}
+
+#upload {
+  opacity: 0;
+}
+
+#upload-label {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.col-md-12.payment {
+  border-bottom: #80808030 1px solid;
+}
+
+.btn.signup {
+  border: none;
+  max-width: fit-content;
+  padding: 16px 32px;
 }
