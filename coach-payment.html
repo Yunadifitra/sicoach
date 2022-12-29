@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Urbanist:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+        integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap-filestyle.min.js"> </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body id="coachProfile-page">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.svg" alt="SiCoach Logo">
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="btn transparent">LOGOUT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+    </div>
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <div class="picture">
+                        <img src="https://i.ibb.co/0cMfpcr/product-4.jpg" class="picture-src" id="wizardPicturePreview"
+                            title="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5" action="#">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Payment</h4>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                        <div>
+                            <p class="p-command">Lakukan pembayaran sebesar</p>
+                            <h4 class="text-right content">Rp120.000</h4>
+                        </div>
+                    </div>
+                    <div class="row g-2 mt-3">
+                        <div class="col-md-12 payment"><label class="labels">Bank Mandiri</label>
+                            <h5>12051973927</h5>
+                        </div>
+                        <div class="col-md-12 payment"><label class="labels">Bank Mandiri</label>
+                            <h5>12051973927</h5>
+                        </div>
+                        <div class="col-md-12 payment"><label class="labels">Bank Mandiri</label>
+                            <h5>12051973927</h5>
+                        </div>
+                        <div class="col-md-12 payment"><label class="labels">Bank Mandiri</label>
+                            <h5>12051973927</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="col-md-4" action="#">
+                <div class="p-3 py-5" action="#">
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                        <h6 class="text-left">Upload Bukti Pembayaran</h6>
+                    </div>
+                    <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                        <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+                        <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+                        <div class="input-group-append">
+                            <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i
+                                    class="fa fa-cloud-upload mr-2 text-muted"></i><small
+                                    class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 text-center">
+                    <button class="btn btn-primary profile-button" type="button">Saya Sudah Bayar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('#upload').on('change', function () {
+                readURL(input);
+            });
+        });
+
+        var input = document.getElementById('upload');
+        var infoArea = document.getElementById('upload-label');
+
+        input.addEventListener('change', showFileName);
+        function showFileName(event) {
+            var input = event.srcElement;
+            var fileName = input.files[0].name;
+            infoArea.textContent = fileName;
+        }
+    </script>
+</body>
+
+</html>
