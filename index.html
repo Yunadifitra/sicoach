@@ -1,302 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="wrapper">
-        <nav>
-          <div class="logo">GD.</div>
 
-          <ul>
-            <li>
-              <a href="#">About</a>
-            </li>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to SiCoach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Urbanist:wght@700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-            <li>
-              <a href="#">Services</a>
-            </li>
-
-            <li>
-              <a href="#">Our Work</a>
-            </li>
-
-            <li>
-              <a href="#" class="btn dark">Enrol Now</a>
-            </li>
-          </ul>
-        </nav>
-
-        <!-- End of desktop navigation menu -->
-
-        <nav class="mobile-nav">
-          <div class="logo">GD.</div>
-          <div class="menu-icon">
-            <img src="images/menu-icon.svg" alt="" />
-          </div>
-        </nav>
-
-        <div class="mobile-menu-container">
-          <div class="close-icon">
-            <img src="images/close-icon.svg" alt="" />
-          </div>
-
-          <ul>
-            <li>
-              <a href="#">About</a>
-            </li>
-
-            <li>
-              <a href="#">Services</a>
-            </li>
-
-            <li>
-              <a href="#">Our Work</a>
-            </li>
-
-            <li>
-              <a href="#" class="btn dark">Enrol Now</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- End of mobile navigation menu -->
-
-        <div class="hero-section">
-          <div class="left">
-            <h1>
-              Learn the art of <br />
-              Game Dev
-            </h1>
-
-            <p>
-              This is a comprehensive course on Game Development. You will learn
-              everything from generating an idea to publishing your games to
-              different platforms.
-            </p>
-
-            <a href="#" class="btn light enrol-icon">Enrol Now</a>
-          </div>
-
-          <div class="right">
-            <img src="images/hero-image.png" alt="" />
-          </div>
-
-          <div class="achievement-cards">
-            <div class="achievement-card students-enrolled">
-              <div class="content">
-                <div>
-                  <h3>32K</h3>
-                </div>
-                <p>Students Enrolled</p>
-              </div>
-
-              <div class="bg"></div>
-            </div>
-
-            <div class="achievement-card overall-rating">
-              <div class="content">
-                <div>
-                  <h3>4.7</h3>
-                  <img src="images/start-icon.svg" alt="" />
-                </div>
-                <p>Overall Rating</p>
-              </div>
-
-              <div class="bg"></div>
-            </div>
-          </div>
+<body>
+  <header id="header-landingpage">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.svg" alt="SiCoach Logo">
+      </div>
+      <ul>
+        <li>
+          <a href="login.html">LOGIN</a>
+        </li>
+        <li>
+          <a href="register.html" class="btn transparent">REGISTER</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <div class="hero-section">
+        <div class="hero-section-content">
+          <h1>
+            Find Your Best Coach Here
+          </h1>
+          <p>
+            Here you can look for trainers who are qualified and of course have a lot of experience.
+          </p>
+          <a href="#" class="btn solid next-icon">Sign Up Now</a>
         </div>
       </div>
-    </header>
+      <!-- End of desktop navigation menu -->
+      <!-- <nav class="mobile-nav">
 
-    <!-- End of the header section -->
-
-    <div class="wrapper">
-      <section class="testimonials-section">
-        <div class="left">
-          <div class="testimonial-card">
-            <div class="content">
-              This is a great course. It helped me a lot. Thank you :)
-            </div>
-
-            <div class="info">
-              <h4>Jane Cooper</h4>
-              <p class="company">Developer, Sony</p>
-            </div>
-
-            <img src="images/testimonial-1.png" alt="" />
-          </div>
-
-          <div class="testimonial-card">
-            <div class="content">Amazing Work! Well done!</div>
-
-            <div class="info">
-              <h4>Jacob Jones</h4>
-              <p class="company">Designer, Facebook</p>
-            </div>
-
-            <img src="images/testimonial-2.png" alt="" />
-          </div>
+        <div class="logo">
+          <img src="images/logo.svg" alt="SiCoach-logo">
         </div>
 
-        <div class="right">
-          <h2>What our students say?</h2>
-
-          <div class="features">
-            <p>
-              All students get access to all the videos and also the source code
-              of the projects.
-            </p>
-
-            <p>
-              You will also have access to a private Discord channel where you
-              can discuss your doubts.
-            </p>
-          </div>
-
-          <a href="#" class="btn light desktop-btn">Learn More</a>
+        <div class="menu-icon">
+          <img src="images/menu.svg" alt="menu-icon">
         </div>
 
-        <a href="#" class="btn light mobile-btn">Learn More</a>
-      </section>
+        <div class="mobile menu-container">
+          <div class="close-icon">
+            <img src="images/close.svg" alt="close-icon">
+          </div>
+
+          <ul>
+            <li>
+              <a href="#">LOGIN</a>
+            </li>
+            <li>
+              <a href="#" class="btn transparent">REGISTER</a>
+            </li>
+          </ul>
+        </div> -->
     </div>
+  </header>
 
-    <!-- End of testimonials Section -->
+  <!-- End of header section -->
 
-    <section class="courses-section">
-      <div class="wrapper">
-        <h2 class="light">Our Courses</h2>
-
-        <div class="course-cards">
-          <div class="course-card">
-            <img src="images/course-1.png" alt="" />
-
-            <div class="info">
-              <h3>Game Design Essentials</h3>
-              <div class="duration">8 Hrs</div>
-            </div>
-          </div>
-
-          <div class="course-card">
-            <img src="images/course-2.png" alt="" />
-
-            <div class="info">
-              <h3>Unity Game Engine Fundamentals</h3>
-              <div class="duration">15 Hrs</div>
-            </div>
-          </div>
+  <div class="wrapper">
+    <section class="instruction-section">
+      <h2>
+        How it Works
+      </h2>
+      <div class="content">
+        <div class="content-child">
+          <img src="images/search-step.svg" alt="search-step" class="step-img">
+          <h3>
+            SEARCH
+          </h3>
+          <h4>
+            Search for a coach based on your sport category
+          </h4>
         </div>
-
-        <a href="#" class="btn light">All Courses</a>
+        <div>
+          <img src="images/arrow.svg" alt="arrow">
+        </div>
+        <div class="content-child">
+          <img src="images/select-step.svg" alt="select-step" class="step-img">
+          <h3>
+            SELECT
+          </h3>
+          <h4>
+            Select and view coach profile that meet your needs
+          </h4>
+        </div>
+        <div>
+          <img src="images/arrow.svg" alt="arrow">
+        </div>
+        <div class="content-child">
+          <img src="images/contact-step.svg" alt="contact-step" class="step-img">
+          <h3>
+            CONTACT
+          </h3>
+          <h4>
+            Search for a coach based on your sport category
+          </h4>
+        </div>
       </div>
     </section>
+  </div>
 
-    <!-- End of courses section -->
+  <!-- End of instruction section -->
 
+  <section class="sports-category">
     <div class="wrapper">
-      <section class="app-section">
-        <h2>Get our App</h2>
-        <p>You can use our App for better experience on smartphones</p>
-
-        <div class="app-buttons">
-          <div class="app-btn">
-            <img src="images/appstore-icon.svg" alt="" />
-            <span>App Store</span>
-          </div>
-
-          <div class="app-btn">
-            <img src="images/google-play-icon.svg" alt="" />
-            <span>Google Play</span>
-          </div>
+      <h2>
+        Our Sports
+      </h2>
+      <div class="contents">
+        <div class="content">
+          <img src="images/football.png" alt="football">
         </div>
-      </section>
-    </div>
-
-    <!-- End of the app section -->
-
-    <footer>
-      <div class="wrapper">
-        <div class="links-container">
-          <div class="links">
-            <h3>Quick Links</h3>
-
-            <ul>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
-
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-
-              <li>
-                <a href="#">Terms & Conditions</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="links">
-            <h3>Course</h3>
-
-            <ul>
-              <li>
-                <a href="#">Log In</a>
-              </li>
-
-              <li>
-                <a href="#">Download</a>
-              </li>
-
-              <li>
-                <a href="#">All Courses</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="links">
-            <h3>Contact Us</h3>
-
-            <ul>
-              <li>contact@gmail.com</li>
-            </ul>
-
-            <div class="social">
-              <a href="#">
-                <img src="images/facebook-logo.svg" alt="" />
-              </a>
-
-              <a href="#">
-                <img src="images/instagram-logo.svg" alt="" />
-              </a>
-            </div>
-
-            <form action="#">
-              <input type="text" placeholder="Email Address" />
-              <button class="submit-btn">Subscribe</button>
-            </form>
-          </div>
+        <div class="content">
+          <img src="images/futsal.png" alt="futsal">
         </div>
-
-        <p class="copyright">This website is developed by GTCoding © 2021</p>
+        <div class="content">
+          <img src="images/swimming.png" alt="swimming">
+        </div>
+        <div class="content">
+          <img src="images/badminton.png" alt="badminton">
+        </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script src="main.js"></script>
-  </body>
+  <!-- End of sports category section -->
+
+  <footer>
+    <div class="wrapper">
+      <div class="copyright">
+        <h4>
+          This website is developed by SiCoach Team © 2022
+        </h4>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
 </html>
