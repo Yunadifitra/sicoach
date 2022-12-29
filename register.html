@@ -25,26 +25,43 @@
             <div class="title">
                 <h1>Sign Up</h1>
             </div>
-            <form class="login" action="select-role.html">
+            <form class="login" method="#">
                 <div class="input">
                     <label for="email">Email</label>
                     <input name="email" id="email" type="text" class="field-input" required />
                 </div>
                 <div class="input">
                     <label for="password">Password</label>
-                    <input name="password" id="password" type="password" class="field-input" required />
+                    <input name="password" id="pass" type="password" class="field-input" required />
+                    <span id="message1" style="color:red"> </span> <br><br>
                 </div>
                 <div class="input">
                     <label for="password">Confirm Password</label>
                     <input name="confirm_pass" id="confirm_pass" type="password" class="field-input" required />
+                    <span id="message2" style="color:red"> </span> <br><br>
                 </div>
-
                 <a href="#" style="text-decoration: none;">Forgot your password?</a>
-                <button class="btn solid login">SIGN UP</button>
+                <span id="wrong_pass_alert"></span>
             </form>
+            <input type="submit" class="btn solid signup" value="SIGN UP" onclick="validateForm()"></input>
         </section>
         <section class="overlay"></section>
     </div>
+
+    <script>
+        function validateForm() {
+            var pw1 = document.getElementById("pass").value;
+            var pw2 = document.getElementById("confirm_pass").value;
+            if (pw1 != pw2) {
+                document.getElementById("message2").innerHTML = "Passwords did not match";
+                return false;
+            }
+            if (pw1 == pw2) {
+                window.location.assign('/select-role.html')
+                return false;
+            }
+        }  
+    </script>
 </body>
 
 </html>
