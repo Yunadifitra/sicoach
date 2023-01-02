@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load static %}`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````<!DOCTYPE html>
+<html lang="en">``````````````````````
 
 <head>
     <meta charset="UTF-8">
@@ -129,7 +129,7 @@ header {
 .navbar {
   display: flex;
   align-items: center;
-  position: fixed;
+ 
   justify-content: space-between;
   width: 100%;
   height: 90px;
@@ -688,11 +688,11 @@ input[type="radio"] {
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="images/logo.svg" alt="SiCoach Logo">
+                <img src="static/images/logo.svg" alt="SiCoach Logo">
             </div>
             <ul>
                 <li>
-                    <a href="{% url 'all' %}" class="btn transparent">Kembali</a>
+                    <p style="color: white;">Sudah buat profile?   <a href="{% url 'all' %}" class="">Masuk</a></p>
                 </li>
             </ul>
         </nav>
@@ -705,22 +705,22 @@ input[type="radio"] {
                 
             </div>
             <div class="col-md-5 border-right">
-                <form class="p-3 py-5" action="{% url 'all' %}" method="post" enctype="multipart/form-data">
+                <form class="p-3 py-5" action="{% url 'tambah_profil' %}" method="post" enctype="multipart/form-data">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="text-right">Profile Settings</h4>
                     </div>
                     <div class="row mt-3">
                         <div class="col-md-12"><label class="labels">masukan angka: {{user.id}} pada kolom user</label>
-                        {% csrf_token %}
-
-                        {{ form.as_p }}
-                      
+                          <form action="{% url 'pembayaran' %}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                    
+                            {{ form.as_p }}
+                          <a href="{% url 'pembayaran' %}">
+                            <button class="btn btn-primary profile-button"><a href="{% url 'pembayaran' %}"></a>Tambah Profile</button>
+                          </a>
                     </div>
                 </form>
             </div>
-                <div class="mt-1 text-center">
-                    <button class="btn btn-primary profile-button" type="button">Save Profile</button>
-                </div>
         </div>
         <script>
             $(document).ready(function () {

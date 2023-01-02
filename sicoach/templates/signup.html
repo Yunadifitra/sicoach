@@ -14,8 +14,7 @@
           <form action="{% url 'signup' %}" method="post">
             {% csrf_token %} {{ form.as_p }}
 
-            <button a href="% url 'buku' %" class="btn btn-primary">Input</button>
-            <a href="{% url 'masuk' %}" class="btn btn-success">Selanjutnya</a>
+            <button a href="{% url 'masuk' %}" class="btn btn-primary"><a href="{% url 'masuk' %}">Input</a></button>
           </form>
         </div>
       </div>

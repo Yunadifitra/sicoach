@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -313,8 +314,8 @@
 
       .overlay {
         height: 100%;
-        background: linear-gradient(107.15deg, #020f2a -36.91%, rgba(2, 15, 42, 0) 88.2%), url("images/bekgron.png");
-        background-position: left;
+        background: linear-gradient(107.15deg, #020f2a -36.91%, rgba(2, 15, 42, 0) 88.2%), url(https://sportsmatik.com/uploads/matik-sports-corner/matik-know-how/swimming1_1562582117.jpg);
+        background-position: center;
         background-size: cover;
       }
 
@@ -678,14 +679,15 @@
         <div class="title">
           <h1>Sign Up</h1>
         </div>
-        <form action="{% url 'signup' %}" method="post">
+        <form action="{% url 'masuk' %}" method="post">
           <div class="input">
             <label for="email">Email</label>
             <input name="email" id="email" type="text" class="field-input" required />
           </div>
           <div class="input">{% csrf_token %} {{ form.as_p }}</div>
-          <button class="btn solid login">Input</button>
-          <a href="{% url 'masuk' %}" class="btn solid login">Selanjutnya</a>
+          <a href="{% url 'masuk' %}">
+            <button style="width: 5cm" class="btn solid login">Selanjutnya</button>
+          </a>
         </form>
       </section>
       <section class="overlay"></section>

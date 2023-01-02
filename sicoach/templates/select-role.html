@@ -1,53 +1,751 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Select your Role</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Urbanist:wght@700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Urbanist:wght@700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+  --red-maroon: #56042c;
+  --purple: #550065;
+  --navy: #020f2a;
+  --yellow: #fec310;
+  --orange: #f24c24;
+  --white: #ffffff;
+}
 
-<body id="role-body">
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.btn {
+  font-family: "Urbanist";
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px 32px;
+  border-radius: 50px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+  transition: background 0.5s;
+  border: none;
+}
+
+.btn.transparent {
+  background-color: hsla(0, 0%, 100%, 0.15);
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.solid {
+  background: #f24c24;
+}
+
+.btn.solid:hover {
+  background: #56042c;
+}
+
+.btn.radio {
+  margin-top: 25px;
+}
+
+.btn.next-icon::before {
+  content: url(images/next-icon.svg);
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 151px;
+  right: 16px;
+  padding-right: 14px;
+  top: 50%;
+  border-radius: 0px;
+  transform: translateY(-50%);
+}
+
+.btn.next-icon {
+  padding-right: 54px;
+}
+
+/* Header */
+
+header {
+  height: 90px;
+  width: 100%;
+}
+
+#header-landingpage {
+  background: linear-gradient(260.88deg, rgba(2, 15, 42, 0) 0%, #020f2a 100%),
+    url(images/hero-sect.png);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+#role-header {
+  background: none;
+  width: 100%;
+  padding-left: 80px;
+  height: 90px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  height: 90px;
+  z-index: 100;
+  background: #56042c;
+  font-family: "Urbanist", sans-serif;
+  padding-left: 80px;
+  padding-right: 80px;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.logo {
+  width: 145px;
+  top: 0px;
+  bottom: 0px;
+}
+
+nav ul {
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li a {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  color: #fec310;
+}
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 80px;
+  position: relative;
+  color: #fff;
+}
+
+.hero-section h1 {
+  width: 577px;
+  height: 142px;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 111%;
+  margin-bottom: 0;
+}
+
+.hero-section p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 200%;
+  width: 481.76px;
+  height: 108px;
+  margin-bottom: 25px;
+}
+
+/* Instruction Section */
+
+.instruction-section {
+  text-align: center;
+  margin-top: 50px;
+  gap: 55px;
+  padding-bottom: 50px;
+}
+
+.instruction-section .content {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  gap: 60px;
+  grid-template-areas: "one two three four five";
+  padding-top: 50px;
+  padding-bottom: 88px;
+}
+
+.content-child:nth-child(1) {
+  grid-area: one;
+}
+.content-child:nth-child(2) {
+  grid-area: two;
+}
+.content-child:nth-child(3) {
+  grid-area: three;
+}
+
+.instruction-section h2 {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 120%;
+  text-align: center;
+  color: #550065;
+}
+
+.instruction-section h3 {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 15px;
+  color: #550065;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.instruction-section h4 {
+  width: 185px;
+  height: 45px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #020f2a;
+  letter-spacing: 0.761905px;
+}
+
+.step-img {
+  margin-bottom: 15px;
+}
+
+/* Our Category Section*/
+
+.sports-category {
+  background: linear-gradient(180deg, #89183a 0%, #1e0c17 118.12%);
+  padding-bottom: 88px;
+  width: 100%;
+  padding: 50px 0;
+  z-index: -1;
+}
+
+.sports-category h2 {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 900;
+  font-size: 63.2504px;
+  line-height: 120%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.sports-category .contents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+  padding-bottom: 88px;
+  padding-top: 50px;
+}
+
+.sports-category .content {
+  position: relative;
+}
+
+.sports-category .content img {
+  width: 480px;
+  height: auto;
+  border-radius: 30px;
+  z-index: 0;
+}
+
+.sports-category .wrapper {
+  position: relative;
+}
+
+footer {
+  background-color: #020f2a;
+  color: #fff;
+  padding: 55px 0;
+  justify-content: center;
+}
+
+footer h4 {
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16.8668px;
+  color: #fff;
+}
+
+.overlay {
+  height: 100%;
+  background: linear-gradient(
+      107.15deg,
+      #020f2a -36.91%,
+      rgba(2, 15, 42, 0) 88.2%
+    ),
+    url("images/bekgron.png");
+  background-position: left;
+  background-size: cover;
+}
+
+#form-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  align-items: center;
+  height: 100%;
+}
+
+.form-section form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 58px;
+}
+
+.form-section {
+  height: 100%;
+  padding: 80px;
+  background: linear-gradient(180deg, #2f0e1d 0%, #89193a 100%);
+  display: grid;
+}
+
+.form-section h1 {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 120%;
+  color: #ffffff;
+  margin-bottom: 70px;
+  margin-top: 0;
+}
+
+.form-section input {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  padding: 1rem;
+  background: transparent;
+  border-bottom: 1px solid #ffffff;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.form-section .input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+.form-section label {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.form-section .login {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.form-section a {
+  color: #fec310;
+}
+
+.signin {
+  text-align: center;
+  color: #fff;
+}
+
+#loginPage {
+  background: #ffffff;
+  font-family: "urbanist", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.form-section .container-header {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+#role-body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #89193a;
+}
+
+#wrapper-role {
+  display: inline-flex;
+  background: #fff;
+  height: 100px;
+  width: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 20px 15px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+#wrapper-role .option {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+
+#wrapper-role .option .dot {
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+
+#wrapper-role .option .dot::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #550065;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+
+input[type="radio"] {
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2 {
+  border-color: #550065;
+  background: #550065;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot {
+  background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+#wrapper-role .option span {
+  font-size: 20px;
+  color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span {
+  color: #fff;
+}
+
+#role-body h1 {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 120%;
+  color: #ffffff;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+#coachProfile-page {
+  background: #56042c;
+}
+
+.rounded {
+  border-radius: 20px !important;
+}
+
+.text-right {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+}
+
+.text-left {
+  font-family: "Urbanist", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.text-right.content {
+  text-align: center!important;
+  color: #550065;
+}
+
+.p-command {
+  margin-bottom: 5px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #7e4a9b;
+}
+
+.profile-button {
+  background: rgb(99, 39, 120);
+  box-shadow: none;
+  border: none;
+}
+
+.profile-button:hover {
+  background: #682773;
+}
+
+.profile-button:focus {
+  background: #682773;
+  box-shadow: none;
+}
+
+.profile-button:active {
+  background: #682773;
+  box-shadow: none;
+}
+
+.back:hover {
+  color: #682773;
+  cursor: pointer;
+}
+
+.labels {
+  font-size: 12px;
+}
+
+.radio-container {
+  display: grid;
+  padding: 80px;
+  justify-items: center;
+}
+
+.picture {
+    width: 200px;
+    height: 200px;
+    background-color: #999999;
+    border: 4px solid #cccccc;
+    color: #ffffff;
+    border-radius: 20px;
+    margin: 0px auto;
+    overflow: hidden;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    margin-bottom: 10px;
+}
+
+.picture:hover {
+  border-color: #2ca8ff;
+}
+.content.ct-wizard-green .picture:hover {
+  border-color: #05ae0e;
+}
+.content.ct-wizard-blue .picture:hover {
+  border-color: #3472f7;
+}
+.content.ct-wizard-orange .picture:hover {
+  border-color: #ff9500;
+}
+.content.ct-wizard-red .picture:hover {
+  border-color: #ff3b30;
+}
+.picture input[type="file"] {
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0 !important;
+  position: absolute;
+  top: 0;
+}
+
+.picture-src {
+  width: 100%;
+}
+
+.header-section {
+  display: flex;
+  justify-content: center;
+}
+
+.header-section h1 {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 120%;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  top: 180px;
+}
+
+.small-container {
+	max-width: 1080px;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+    margin-top: 80px;
+}
+
+.row-coach {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.small-container .title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #550065;
+}
+
+.small-container .title::after {
+	content: "";
+    background: #f24c24;
+	width: 80px;
+	height: 5px;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%);
+  }
+
+.col-4 img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.col-4 h4{
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+#upload {
+  opacity: 0;
+}
+
+#upload-label {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.col-md-12.payment {
+  border-bottom: #80808030 1px solid;
+}
+
+.btn.signup {
+  border: none;
+  max-width: fit-content;
+  padding: 16px 32px;
+}
+
+    </style>
+  <body id="role-body">
     <header id="role-header">
-        <div class="logo">
-            <img src="images/logo.svg" alt="SiCoach Logo">
-        </div>
+      <div class="logo">
+        <img />
+      </div>
     </header>
     <div class="radio-container">
-        <h1> Which one are you? </h1>
-        <div class="wrapper" id="wrapper-role">
-            <input type="radio" name="role" id="option-1" value="athlete">
-            <label for="option-1" class="option option-1">
-                <div class="dot"></div>
-                <span>Athlete</span>
-            </label>
-            <input type="radio" name="role" id="option-2" value="coach">
-            <label for="option-2" class="option option-2">
-                <div class="dot"></div>
-                <span id>Coach</span>
-            </label>
-        </div>
-        <button type="button" onclick="displayRadioValue()" class="btn solid radio">Select</button>
+      <h1>Which one are you?</h1>
+      <div class="wrapper" id="wrapper-role">
+        <input type="radio" name="role" id="option-1" value="athlete" />
+        <label for="option-1" class="option option-1">
+          <div class="dot"></div>
+          <span>Pengunjung</span>
+        </label>
+        <input type="radio" name="role" id="option-2" value="coach" />
+        <label for="option-2" class="option option-2">
+          <div class="dot"></div>
+          <span id>Pelatih</span>
+        </label>
+      </div>
+      <button type="button" onclick="displayRadioValue()" class="btn solid radio">Select</button>
     </div>
+    
     <script>
-        function displayRadioValue() {
-            const ele = document.getElementsByName('role');
+      function displayRadioValue() {
+        const ele = document.getElementsByName("role");
 
-            for (i = 0; i < ele.length; i++) {
-                if (ele[i].checked) {
-                    if (ele[i].value === "coach") window.location.assign('/coach-profile.html')
-                    if (ele[i].value === "athlete") window.location.assign('/index.html')
-                }
-            }
+        for (i = 0; i < ele.length; i++) {
+          if (ele[i].checked) {
+            if (ele[i].value === "coach") window.location.assign("{% url 'tambah_profil' %}");
+            if (ele[i].value === "athlete") window.location.assign("{% url 'all_atlit' %}");
+          }
         }
+      }
     </script>
-</body>
-
+  </body>
 </html>

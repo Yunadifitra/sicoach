@@ -20,3 +20,7 @@ class Profile(models.Model):
 
   def __str__(self):
     return self.nama
+
+class Pembayaran(models.Model):
+  Bukti = models.ImageField(upload_to='cover/', null=True)
+  tanggal = models.DateTimeField(blank=True, auto_now_add=True, null=True)

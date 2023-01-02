@@ -703,14 +703,7 @@ input[type="radio"] {
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    <div class="picture">
-                        {% if buku.cover %}
-                        <img src="{{ buku.cover.url }}" class="picture-src" id="wizardPicturePreview" title="">
-                        {% endif %}
-                            
-                    </div>
-                </div>
+             
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
@@ -732,7 +725,7 @@ input[type="radio"] {
                             <h5>{{ buku.asal_kota }}</h5>
                         </div>
                         <div class="col-md-12"><label class="labels">Usia</label>
-                            <h5>{{ buku.usia }}</h5>
+                            <h5>{{ buku.umur }}</h5>
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -745,13 +738,13 @@ input[type="radio"] {
             </div>
             <div class="col-md-4">
                 <div class="mt-5 text-center">
-                    <a href="https://api.whatsapp.com/send?phone={{buku.no_hp}}" class="btn solid">CONTACT ME</a>
+                    <a href="https://api.whatsapp.com/send?phone={{buku.no_hp}}" class="btn solid btn-success">CONTACT ME</a>
                 </div>
                 <div class="mt-5 text-center">
-                  <a href="{% url 'ubah_profil' %}" class="btn transparent">Edit Profile</a>
+                  <a href="{% url 'ubah_profil' %}" class="btn solid">Edit Profile</a>
                 </div>
                 <div class="mt-5 text-center">
-                  <a href="{% url 'hapus_profil' %}" class="btn transparent">hapus_profil</a>
+                  <a href="{% url 'hapus_profil' %}" class="btn solid btn-danger">hapus profil</a>
                 </div>
             </div>
             {% endfor %}

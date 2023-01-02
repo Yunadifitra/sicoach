@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coach Profile</title>
+    <title>SiCoach</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,13 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
     <style>
-       :root {
+        :root {
   --red-maroon: #56042c;
   --purple: #550065;
   --navy: #020f2a;
@@ -681,67 +676,57 @@ input[type="radio"] {
 .col-4 img{
     width: 100%;
     border-radius: 20px;
-} 
+}
     </style>
 </head>
-
-<body id="coachProfile-page">
-    <header>
+<body>
+    <header id="category-page">
         <nav class="navbar">
-            <div class="logo">
-                <img src="static/images/logo.svg" alt="SiCoach Logo">
-            </div>
+          <div class="logo">
+            <img src="static/images/logo.svg" alt="SiCoach Logo" />
+          </div>
             <ul>
                 <li>
-                    <a href="{% url 'all' %}" class="btn transparent">Kembali</a>
+                    <a href="{% url 'all_atlit' %}" class="btn solid login">TAMPILKAN SEMUA</a>
+                </li>
+                <li>
+                    <a href="{% url 'profil_sepakbola_atlit' %}">SEPAK BOLA</a>
+                </li>
+                <li>
+                    <a href="{% url 'profil_futsal_atlit' %}">FUTSAL</a>
+                </li>
+                <li>
+                    <a href="{% url 'profil_renang_atlit' %}">RENANG</a>
+                </li>
+                <li>
+                    <a href="{% url 'profil_badminton_atlit' %}">BADMINTON</a>
+                </li>
+                <li>
+                    <a href="{% url 'keluar' %}" class="btn transparent">LOGOUT</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <div class="wrapper">
+    <!-- End of header section -->
+
+    <div class="small-container">
+        <h2 class="title">{{page_title}}</h2>
+        <div class="row-coach">
+          {% for buku in books %}
+          <div class="col-4">
+            {% if buku.cover %}
+            <a href="{% url 'profil' %}"><img src="{{ buku.cover.url }}" alt="" /></a>
+              {% endif %}
+              <br><br>
+            <h4>{{ buku.nama }}</h4>
+            <h5>{{buku.asal_kota}}</h5>
+            <p>{{buku.kategori_id}}</span></p>
+            <a href="https://api.whatsapp.com/send?phone={{buku.no_hp}}" class="btn solid btn-success">CONTACT ME</a>
+          </div>
+          {% endfor %}
     </div>
-    <div class="container rounded bg-white mt-5 mb-5">
-        <div class="row">
-            <div class="col-md-3 border-right">
-                
-            </div>
-            <div class="col-md-5 border-right">
-                <form class="p-3 py-5" action="{% url 'ubah_profil' %}" method="post" enctype="multipart/form-data">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">Profile Settings</h4>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">masukan angka: {{user.id}} pada kolom user</label>
-                          <form action="{% url 'ubah_profil' %}" method="post" enctype="multipart/form-data">
-                            {% csrf_token %}
-                    
-                            {{ form.as_p }}
-                          <br>
-                            <button class="btn btn-primary profile-button">Simpan</button>
-                        <br><br>
-                        <a href="{% url 'hapus_profil' %}" class="btn solid btn-danger">hapus profil</a>
-                      </div>
-                </form>
-        </div>
-        <script>
-            $(document).ready(function () {
-                // Prepare the preview for profile picture
-                $("#wizard-picture").change(function () {
-                    readURL(this);
-                });
-            });
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
-        </script>
-
+    <!-- End of sports category section -->
+    <script src="main.js"></script>
 </body>
 
 </html>

@@ -5,13 +5,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to SiCoach</title>
+    <title>Coach Profile</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Urbanist:wght@700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap-filestyle.min.js"></script>
     <style>
       :root {
         --red-maroon: #56042c;
@@ -81,7 +87,7 @@
       }
 
       .btn.next-icon::before {
-        content: url(static/images/next-icon.svg);
+        content: url(images/next-icon.svg);
         position: absolute;
         height: 20px;
         width: 20px;
@@ -105,7 +111,7 @@
       }
 
       #header-landingpage {
-        background: linear-gradient(260.88deg, rgba(2, 15, 42, 0) 0%, #020f2a 100%), url(static/images/hero-sect.png);
+        background: linear-gradient(260.88deg, rgba(2, 15, 42, 0) 0%, #020f2a 100%), url(images/hero-sect.png);
         height: 100vh;
         width: 100%;
         background-size: cover;
@@ -317,7 +323,7 @@
 
       .overlay {
         height: 100%;
-        background: linear-gradient(107.15deg, #020f2a -36.91%, rgba(2, 15, 42, 0) 88.2%), url("static/images/bekgron.png");
+        background: linear-gradient(107.15deg, #020f2a -36.91%, rgba(2, 15, 42, 0) 88.2%), url("images/bekgron.png");
         background-position: left;
         background-size: cover;
       }
@@ -669,121 +675,97 @@
         border-radius: 20px;
       }
     </style>
+    <script src="main.js"></script>
   </head>
 
-  <body>
-    <header id="header-landingpage">
+  <body id="coachProfile-page">
+    <header>
       <nav class="navbar">
         <div class="logo">
           <img src="static/images/logo.svg" alt="SiCoach Logo" />
         </div>
         <ul>
           <li>
-            <a href="{% url 'masuk' %}">LOGIN</a>
-          </li>
-          <li>
-            <a href="{% url 'signup' %}" class="btn transparent">REGISTER</a>
+            <a href="#" class="btn transparent">LOGOUT</a>
           </li>
         </ul>
       </nav>
-      <div class="wrapper">
-        <div class="hero-section">
-          <div style="margin-left: 60px" class="hero-section-content">
-            <h1>Find Your Best Coach Here</h1>
-            <p>Lorem ipsum dolor sit amet consectetur. Metus eget aliquam purus augue pellentesque. Sit volutpat massa velit quis in sed dictum cras.</p>
-            <a href="{% url 'masuk' %}" class="btn solid next-icon">Sign Up Now</a>
-          </div>
-        </div>
-        <!-- End of desktop navigation menu -->
-        <!-- <nav class="mobile-nav">
-
-        <div class="logo">
-          <img src="images/logo.svg" alt="SiCoach-logo">
-        </div>
-
-        <div class="menu-icon">
-          <img src="images/menu.svg" alt="menu-icon">
-        </div>
-
-        <div class="mobile menu-container">
-          <div class="close-icon">
-            <img src="images/close.svg" alt="close-icon">
-          </div>
-
-          <ul>
-            <li>
-              <a href="#">LOGIN</a>
-            </li>
-            <li>
-              <a href="#" class="btn transparent">REGISTER</a>
-            </li>
-          </ul>
-        </div> -->
-      </div>
     </header>
-
-    <!-- End of header section -->
-
-    <div class="wrapper">
-      <section class="instruction-section">
-        <h2>How it Works</h2>
-        <div class="content">
-          <div class="content-child">
-            <img src="static/images/search-step.svg" alt="search-step" class="step-img" />
-            <h3>SEARCH</h3>
-            <h4>Search for a coach based on your sport category</h4>
-          </div>
-          <div>
-            <img src="static/images/arrow.svg" alt="arrow" />
-          </div>
-          <div class="content-child">
-            <img src="static/images/select-step.svg" alt="select-step" class="step-img" />
-            <h3>SELECT</h3>
-            <h4>Select and view coach profile that meet your needs</h4>
-          </div>
-          <div>
-            <img src="static/images/arrow.svg" alt="arrow" />
-          </div>
-          <div class="content-child">
-            <img src="static/images/contact-step.svg" alt="contact-step" class="step-img" />
-            <h3>CONTACT</h3>
-            <h4>Search for a coach based on your sport category</h4>
+    <div class="wrapper"></div>
+    <div class="container rounded bg-white mt-5 mb-5">
+      <div class="row">
+        <div class="col-md-3 border-right">
+          <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+           
           </div>
         </div>
-      </section>
+        <div class="col-md-5 border-right">
+          <div class="p-3 py-5" action="#">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="text-right">Payment</h4>
+            </div>
+            <div class="d-flex justify-content-center align-items-center mb-3">
+              <div>
+                <p class="p-command">Lakukan pembayaran sebesar</p>
+                <h3 style="color: rgb(85, 2, 96); font-weight: bold;;" class="text-center content">Rp20.000</h3>
+              </div>
+            </div>
+            <div class="row g-2 mt-3">
+              <div class="col-md-12 payment">
+                <label class="labels">Bank Mandiri</label>
+                <h5>12051973927</h5>
+              </div>
+              <div class="col-md-12 payment">
+                <label class="labels">Bank BRI</label>
+                <h5>12051973927</h5>
+              </div>
+              <div class="col-md-12 payment">
+                <label class="labels">Bank BNI</label>
+                <h5>12051973927</h5>
+              </div>
+              <div class="col-md-12 payment">
+                <label class="labels">Bank BCA</label>
+                <h5>12051973927</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="col-md-4" action="#">
+          <div class="p-3 py-5" action="#">
+            <div class="d-flex justify-content-center align-items-center mb-3">
+              <h6 style="font-weight: bold;" class="text-left">Upload Bukti Pembayaran</h6>
+            </div>
+            <div class="input-group mb-3 px-2 py-2 ">
+                <form action="{% url 'pembayaran' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+            
+                    {{ form.as_p }}
+            </div>
+          </div>
+          <div class="mt-5 text-center">
+            <a href="{% url 'all' %}">
+                <button  class="btn btn-primary profile-button" type="button">Saya Sudah Bayar</button>
+            </a>
+          </div>
+        </form>
+      </div>
     </div>
+    <script>
+      $(function () {
+        $("#upload").on("change", function () {
+          readURL(input);
+        });
+      });
 
-    <!-- End of instruction section -->
+      var input = document.getElementById("upload");
+      var infoArea = document.getElementById("upload-label");
 
-    <section class="sports-category">
-      <div class="wrapper">
-        <h2>Our Sports</h2>
-        <div class="contents">
-          <div class="content">
-            <img src="static/images/football.png" alt="football" />
-          </div>
-          <div class="content">
-            <img src="static/images/futsal.png" alt="futsal" />
-          </div>
-          <div class="content">
-            <img src="static/images/swimming.png" alt="swimming" />
-          </div>
-          <div class="content">
-            <img src="static/images/badminton.png" alt="badminton" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- End of sports category section -->
-
-    <footer>
-      <div class="wrapper">
-        <div class="copyright">
-          <h4>This website is developed by SiCoach Team © 2022</h4>
-        </div>
-      </div>
-    </footer>
-    <script src="main.js"></script>
+      input.addEventListener("change", showFileName);
+      function showFileName(event) {
+        var input = event.srcElement;
+        var fileName = input.files[0].name;
+        infoArea.textContent = fileName;
+      }
+    </script>
   </body>
 </html>

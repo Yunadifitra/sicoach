@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -681,12 +682,12 @@ input[type="radio"] {
 <body>
     <header id="category-page">
         <nav class="navbar">
-            <div class="logo">
-                <img src="images/logo.svg" alt="SiCoach Logo">
-            </div>
+          <div class="logo">
+            <img src="static/images/logo.svg" alt="SiCoach Logo" />
+          </div>
             <ul>
                 <li>
-                    <a href="{% url 'tambah_profil' %}" class="btn solid login">MENJADI PELATIH</a>
+                    <a href="{% url 'ubah_profil' %}" class="btn solid login">EDIT PROFILE</a>
                 </li>
                 <li>
                     <a href="{% url 'profil_sepakbola' %}">SEPAK BOLA</a>
@@ -701,7 +702,7 @@ input[type="radio"] {
                     <a href="{% url 'profil_badminton' %}">BADMINTON</a>
                 </li>
                 <li>
-                    <a href="keluar" class="btn transparent">LOGOUT</a>
+                    <a href="{% url 'keluar' %}" class="btn transparent">LOGOUT</a>
                 </li>
             </ul>
         </nav>
@@ -709,27 +710,22 @@ input[type="radio"] {
     <!-- End of header section -->
 
     <div class="small-container">
-        <h2 class="title">Category</h2>
+        <h2 class="title">{{judul}}</h2>
         <div class="row-coach">
           {% for buku in books %}
           <div class="col-4">
             {% if buku.cover %}
-            <a href="{% url 'ubah_profil' %}"><img src="{{ buku.cover.url }}" alt="" /></a>
+            <a href="{% url 'profil' %}"><img src="{{ buku.cover.url }}" alt="" /></a>
               {% endif %}
+              <br><br>
             <h4>{{ buku.nama }}</h4>
-            <p>{{buku.asal_kota}}</span></p>
+            <h5>{{buku.asal_kota}}</h5>
+            <p>{{buku.kategori_id}}</span></p>
+            <a href="https://api.whatsapp.com/send?phone={{buku.no_hp}}" class="btn solid btn-success">CONTACT ME</a>
           </div>
           {% endfor %}
     </div>
     <!-- End of sports category section -->
-    <footer>
-        <div class="wrapper">
-            <div class="copyright">
-                <h4> This website is developed by SiCoach Team © 2022 </h4>
-            </div>
-        </div>
-        
-    </footer>
     <script src="main.js"></script>
 </body>
 
