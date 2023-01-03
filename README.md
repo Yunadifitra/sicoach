@@ -1,6 +1,6 @@
 # Aplikasi Pencarian Pelatih SiCoach
-Progress belajar materi MVC matapelajaran PBO.
-Projek ini dipecah menjadi beberapa bagian yang dibuat kedalam bentuk series video, guna mempermudah proses pembelajaran langkah-demi-langkah.
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
 
 # Installation
 ### Prerequisite
