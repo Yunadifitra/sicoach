@@ -1,8 +1,7 @@
 # Aplikasi Pencarian Pelatih SiCoach
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
+<img width="485" alt="image" src="https://user-images.githubusercontent.com/91929189/210288038-e95a8d67-3ac5-4cc6-be34-4f5bd0d2ddd7.png">
 
-# Installation
 ### Prerequisite
 - Python 3.7.15 or later
 - Django 4.1.4 or later
