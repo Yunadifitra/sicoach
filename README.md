@@ -8,9 +8,9 @@
 - Django 4.1.4 or later
 
 ### Run this project
-- Clone/download this [repo](https://github.com/writerlab/perpus).
+- Clone/download this [repo](https://github.com/Yunadifitra/sicoach.git).
 ```
-git clone https://github.com/writerlab/perpus
+git clone https://github.com/Yunadifitra/sicoach.git
 ```
 - Go to project
 ```
